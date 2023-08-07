@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form class="row" style="margin-left:2%;margin-right:2%">
+    <div class="col-md-6">
+        <h4>User Information</h4>
+        <hr>
+    </div>
+    <div class="col-md-6">
+        <h4>Contact Info</h4>
+        <hr>
+    </div>
+    <div class="col-md-12">
+        <div class="form-group row">
+            <label for="inputKey" class="col-md-2 control-label">Name</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="inputKey" placeholder="Key">
+
+                <input type="text" class="form-control" id="inputKey" placeholder="Key">
+            </div>
+            <label for="inputValue" class="col-md-2 control-label">Other</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="inputValue" placeholder="Value">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputKey" class="col-md-2 control-label">State</label>
+            <div class="col-md-2">
+                <input type="text" class="form-control" id="inputSt" placeholder="ST">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" id="inputZip" placeholder="Zip">
+            </div>
+            <label for="inputValue" class="col-md-2 control-label">Other</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="inputValue" placeholder="Value">
+            </div>
+        </div>
+    </div>
+</form>
+<div style="display:flex;justify-content:flex-end;margin-right:1%">
+    <a href="#" class="btn btn-info">New Doctor</a>
+</div>
+<div class="card-body p-0">
+    <table class="table">
+        <thead>
+            <tr style="text-align:center">
+                <th>#</th>
+                <th>Name-Surname</th>
+                <th>Duty</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="text-align:center">
+                <td> <span class="badge badge-info">1</span> </td>
+                <td>  <span class="badge badge-light">Doctor</span>   </td>
+                <td>test</td>
+                <td> <span class="badge badge-danger ">Pasive</span> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
