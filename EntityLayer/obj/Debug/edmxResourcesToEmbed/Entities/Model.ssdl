@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HospitalManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Appointments">
+    <Key>
+      <PropertyRef Name="Appointment_Id" />
+    </Key>
+    <Property Name="Appointment_Id" Type="int" Nullable="false" />
+    <Property Name="Appointment_InfoHeader" Type="varchar" MaxLength="50" />
+    <Property Name="Appointment_Info" Type="varchar" MaxLength="200" />
+    <Property Name="Appointment_DoctorId" Type="int" />
+    <Property Name="Appointment_Date" Type="date" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="PatientId" />
+    </Key>
+    <Property Name="PatientId" Type="int" Nullable="false" />
+    <Property Name="PatientName" Type="varchar" MaxLength="50" />
+    <Property Name="PatientSurname" Type="nchar" MaxLength="10" />
+    <Property Name="Patient_IdCard" Type="int" Nullable="false" />
+    <Property Name="PatientContact" Type="varchar" MaxLength="50" />
+    <Property Name="PatientMail" Type="varchar" MaxLength="50" />
+    <Property Name="PatientAge" Type="tinyint" />
+    <Property Name="PatientAddress" Type="varchar" MaxLength="100" />
+    <Property Name="PatientDepartment" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_Name" Type="varchar" MaxLength="50" />
+    <Property Name="User_Surname" Type="varchar" MaxLength="50" />
+    <Property Name="Username" Type="varchar" MaxLength="50" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="50" />
+    <Property Name="UserDepartmentId" Type="int" />
+    <Property Name="UserPhoneNumber" Type="varchar" MaxLength="50" />
+    <Property Name="UserMail" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Appointments_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Appointments" Type="Self.Appointments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Appointments">
+        <PropertyRef Name="Appointment_DoctorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HospitalManagementModelStoreContainer">
+    <EntitySet Name="Appointments" EntityType="Self.Appointments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Patients" EntityType="Self.Patients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Appointments_Users" Association="Self.FK_Appointments_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Appointments" EntitySet="Appointments" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

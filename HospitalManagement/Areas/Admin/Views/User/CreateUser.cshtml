@@ -1,0 +1,82 @@
+﻿@model EntityLayer.Entities.User
+
+@{
+    ViewBag.Title = "CreateUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="margin-left:15px">Create User</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="card-body">
+        <div class="row">
+
+            <div class="form-group col ">
+                <label for="NameInput">Name</label>
+                <input type="email" class="form-control" id="NameInput" name="User_Name" placeholder="Enter Name">
+            </div>
+            <div class="form-group col">
+                <label for="SurnameInput">Surname</label>
+                <input type="password" class="form-control" id="SurnameInput" name="User_Surname" placeholder="Enter Surname">
+            </div>
+            <div class="form-group col">
+                <label for="InputDate">Birth Of Date</label>
+                <input type="date" class="form-control" id="InputDate" name="Date" placeholder="Date">
+
+            </div>
+        </div>
+        <div class="form-group">
+
+
+            <div class="row">
+                <div class="col">
+                    <label for="UsernameInput">Username</label>
+                    <input class="form-control" id="UsernameInput" type="text" />
+                </div>
+                <div class="col">
+                    <label for="PasswordInput">Password</label>
+                    <input class="form-control" id="PasswordInput" type="text" />
+                </div>
+                <div class="col">
+                    <label for="DutyInput">Duty</label>
+                    @Html.DropDownListFor(x => x.Department.DepartmentName, (List<SelectListItem>)ViewBag.deps, new { @class = "form-control" })
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="form-group">
+
+            <div class="row">
+                <div class="col">
+                    <label for="PhoneInput">Duty</label>
+                    @Html.DropDownListFor(x => x.UserDutyId, (List<SelectListItem>)ViewBag.duty, new { @class = "form-control" })
+
+                </div>
+                <div class="col">
+                    <label required for="PhoneInput">Enter a phone number:</label>
+                    <input class="form-control" type="tel" id="PhoneInput" name="phone" placeholder="0-5(**)-(***)-(****)" >
+                    
+                </div>
+                <div class="col">
+                    <label for="GmailInput">Gmail</label>
+                    <input class="form-control" id="GmailInput" type="email" required />
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.card-body -->
+
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+
+}
+
+

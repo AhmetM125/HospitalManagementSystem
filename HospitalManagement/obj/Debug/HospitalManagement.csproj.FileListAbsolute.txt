@@ -77,3 +77,15 @@ C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\obj\Debug\Ho
 C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\obj\Debug\HospitalManagement.csproj.CopyComplete
 C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\obj\Debug\HospitalManagement.dll
 C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\obj\Debug\HospitalManagement.pdb
+C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\bin\BusinessLayer.dll
+C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\bin\DataAccessLayer.dll
+C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\bin\EntityLayer.dll
+C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\bin\EntityFramework.dll
+C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\bin\BusinessLayer.pdb
+C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\bin\DataAccessLayer.pdb
+C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\bin\EntityLayer.pdb
+C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\bin\EntityLayer.dll.config
+C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\bin\EntityFramework.xml
+C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\bin\DataAccessLayer.dll.config
+C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\bin\EntityFramework.SqlServer.dll
+C:\Users\ahmet.yurdal\Desktop\HospitalManagement\HospitalManagement\bin\EntityFramework.SqlServer.xml
